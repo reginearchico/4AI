@@ -1,0 +1,60 @@
+@font-face{
+  font-family: 'PrincipaleBold';
+  src: url('Comfortaa-Bold.ttf') format('truetype');
+}
+
+h1,h3{font-family: 'PrincipaleBold';}
+
+.text{font-family: 'PrincipaleBold';}
+
+body{
+    background-color: #000;
+    font-family: 'PrincipaleBold';
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+  
+iframe{
+  align-items: center;
+  width: 1414px;
+  height: 766px;
+  border: none;
+}
+
+.button{
+  font-family: 'PrincipaleBold';
+  padding:15px 28px;
+  background: #fff;
+  color:#000000;
+  display:inline-block;
+  border-radius:4px;
+  border: #000;
+}
+
+input[type="checkbox"] {
+  background-color: black;
+  width: 7%;
+  height: 7%;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+input[type="button"] {font-family: 'PrincipaleBold';}
+
+input[type="button"]:hover {font-family: 'PrincipaleBold';}
+
+p {
+  font-family: 'PrincipaleBold';
+  color: white;
+  font-size: large;
+  line-height: 300%;
+  font-weight: lighter;
+  padding-left: 10px;
+}
+
+label {
+  font-family: 'PrincipaleBold';
+  color: white;
+  padding-right: 3%;
+}
