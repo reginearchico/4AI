@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas style="border: 1px solid black" id="myCanvas" width="500" height="250"></canvas>
+    <input type="button" onclick="drawOlympicRings()" value="Disegna i cerchi olimpici">
+    <br>
+</body>
+
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext("2d");
+
+    function drawOlympicRings() {
+        var radius = 40;
+        var spacing = 10; // Spazio tra i cerchi
+        context.lineWidth = 5;
+
+        // Cerchi superiori
+        context.strokeStyle = 'blue';
+        context.beginPath();
+        context.arc(120, 75, radius, 0, 2 * Math.PI);
+        context.stroke();
+        context.closePath();
+
+        context.strokeStyle = 'black';
+        context.beginPath();
+        context.arc(180, 75, radius, 0, 2 * Math.PI);
+        context.stroke();
+        context.closePath();
+
+        context.strokeStyle = 'red';
+        context.beginPath();
+        context.arc(240, 75, radius, 0, 2 * Math.PI);
+        context.stroke();
+        context.closePath();
+
+        // Cerchi inferiori
+        context.strokeStyle = 'yellow';
+        context.beginPath();
+        context.arc(150, 125, radius, 0, 2 * Math.PI);
+        context.stroke();
+        context.closePath();
+
+        context.strokeStyle = 'green';
+        context.beginPath();
+        context.arc(210, 125, radius, 0, 2 * Math.PI);
+        context.stroke();
+        context.closePath();
+    }
+</script>
+
+</html>

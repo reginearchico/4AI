@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista della spesa</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <script>
+        var lista = [];
+
+        function s() {
+            var elemento = document.getElementById("testo").value;
+            lista.push(elemento);
+            document.getElementById("testo").value = '';
+        }
+
+        function stampa() {
+            localStorage.setItem("dati", lista);
+            document.location.href = "receiver.html";
+        }
+    </script>
+    
+    <body>
+        <div id="container">
+            <h1>Lista della spesa</h1>
+            <p>Inserisci le cose da comprare.</p>
+            <input type="text" id="testo">
+            <br>
+            <button onclick="s()">Invia</button>
+            <button onclick="stampa()">Stampa</button>
+            <p id="stampa"></p>
+        </div>
+    </body>
+</html>
