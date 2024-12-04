@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "PrincipaleBold";
+    src: url("Comfortaa-Bold.ttf");
+}
+
+@font-face {
+    font-family: "PrincipaleLight";
+    src: url("Comfortaa-Light.ttf");
+}
+
+body {
+    background-color: black;
+    margin: 70px;
+    font-family: "PrincipaleLight";
+}
+
+h1, h2 {
+    color: white;
+    font-family: "PrincipaleBold";
+    text-align: center;
+}
+
+label, p {
+    color: white;
+    font-family: "PrincipaleLight";
+}
+
+input, select {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-family: "PrincipaleLight";
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="date"], input[type="number"], select {
+    width: 20%;
+    height: 30px;
+    min-width: 120px;
+    max-width: 150px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    background-color: black;
+}
+
+input[type="button"] {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    border-radius: 15px;
+    font-size: medium;
+    width: 10%;
+    height: 40px;
+    min-width: 90px;
+}
+
+input[type="button"]:hover {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.output {
+    margin-top: 7%;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 50%;
+    padding: 20px;
+}
+
+.divCasella, .divTesto, .divMateria {
+    padding-top: 5%;
+}
+
+.divTesto {
+    padding-top: 2%;
+}
+
+select {
+    padding: 12px;
+}
+
+option {
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    font-size: 500%;
+    font-stretch: extra-expanded;
+}
+
+p {
+    font-size: large;
+    line-height: 300%;
+    font-weight: lighter;
+    padding-left: 10px;
+}
