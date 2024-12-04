@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista della spesa</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div id="infoPersona"></div>
+        <script>
+            document.getElementById("infoPersona").innerHTML = localStorage.getItem("dati");
+        </script>
+    </body>
+</html>
