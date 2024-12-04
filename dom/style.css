@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Principale";
+    src: url("Comfortaa-Bold.ttf");
+}
+
+.body {
+    font-family: "Principale";
+    align-items: center;
+    justify-content: center;
+}
+
+.generale {
+    width: 300px;
+}
+
+.form {
+    text-align: center;
+    border: 1px solid green;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+h1, label {color: green;}
+
+input[type="button"] {
+    font-family: "Principale";
+    border-radius: 10px;
+    background-color: lightgreen;
+    border-color: green;
+    color: black;
+    text-align: center;
+}
