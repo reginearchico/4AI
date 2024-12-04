@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="generale">
+            <div id="esito" class="result">
+                <p id="testoEsito"></p>
+            </div>
+            <div class="form">
+                <h1>Login</h1>
+                <label for="user">Mail:</label><br>
+                <input type="text" id="user" required placeholder="example@mail.com"><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" required><br>
+                <h5>(La password deve contenere almeno 8 caratteri, una lettera maiuscola, un numero e un carattere speciale per essere considerata valida)</h5>
+                <input type="button" value="Invio" id="bottone" onclick="controllo()">
+            </div>
+        </div>
+    </body>
+    <script src="login.js"></script>
+</html>
