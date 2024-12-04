@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Calcolatrice</title>
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+
+            function inserisciNumero(num) {
+                let display = document.getElementById("display");
+                display.value += num;
+            }
+    
+            function calcola() {
+                let display = document.getElementById("display");
+                try {
+                    display.value = Function('return ' + display.value)();
+                } catch (e) {
+                    display.value = 'Errore';
+                }
+            }
+    
+            function calcolaRadice() {
+                let display = document.getElementById("display");
+                display.value = Math.sqrt(display.value);
+            }
+    
+            function calcolaPercentuale() {
+                let display = document.getElementById("display");
+                display.value = display.value / 100;
+            }
+    
+            function calcolaPotenza() {
+                let display = document.getElementById("display");
+                display.value = Math.pow(display.value, 2);
+            }
+    
+            function calcolaValoreAssoluto() {
+                let display = document.getElementById("display");
+                display.value = Math.abs(display.value);
+            }
+    
+        </script>
+
+    </head>
+
+    <body>
+
+        <h1>Calcolatrice</h1>
+        <input type="text" id="display">
+        <br><br>
+        <button onclick="calcolaPercentuale()">%</button>
+        <button onclick="calcolaPotenza()">x^2</button>
+        <button onclick="calcolaValoreAssoluto()">ABS</button>
+        <br>
+        <button onclick="inserisciNumero('1')">1</button>
+        <button onclick="inserisciNumero('2')">2</button>
+        <button onclick="inserisciNumero('3')">3</button>
+        <button onclick="inserisciNumero('+')">+</button>
+        <br>
+        <button onclick="inserisciNumero('4')">4</button>
+        <button onclick="inserisciNumero('5')">5</button>
+        <button onclick="inserisciNumero('6')">6</button>
+        <button onclick="inserisciNumero('-')">-</button>
+        <br>
+        <button onclick="inserisciNumero('7')">7</button>
+        <button onclick="inserisciNumero('8')">8</button>
+        <button onclick="inserisciNumero('9')">9</button>
+        <button onclick="inserisciNumero('*')">*</button>
+        <br>
+        <button onclick="inserisciNumero('0')">0</button>
+        <button onclick="calcolaRadice()">√</button>
+        <button class="equals" onclick="calcola()">=</button>
+        <button onclick="inserisciNumero('/')">/</button>
+    
+    </body>
+    
+</html>
