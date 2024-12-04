@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Temperature CSV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="titolo"> 
+        <h1>Temperature utilizzando csv</h1>
+    </div>
+
+    <div class="tabella">
+        <input type="file" id="fileInput" accept=".csv">
+        <button class="btn" onclick="readFile()">Leggi dati</button>
+        <div id="stampadati"></div>
+    </div>
+    
+    <script>
+        function readFile() {
+            let input = document.getElementById('fileInput');
+            if (input.files.length > 0) {
+                let file = input.files[0];
+                let fileReader = new FileReader();
+                fileReader.readAsText(file);
+
+                fileReader.onload = function() {
+                    var str = fileReader.result;
+                    var rows = str.split('\n');
+                    rows = rows.filter(row => row.trim() !== "");
+
+                    var table = document.createElement("table");
+                    var headerRow = document.createElement("tr");
+                    var headers = rows[0].split(',');
+
+                    headers.forEach(function(header) {
+                        var th = document.createElement("th");
+                        th.textContent = header;
+                        headerRow.appendChild(th);
+                    });
+                    table.appendChild(headerRow);
+                    
+                    for (var i = 1; i < rows.length; i++) {
+                        var row = document.createElement("tr");
+                        var cells = rows[i].split(',');
+                        cells.forEach(function(cell) {
+                            var td = document.createElement("td");
+                            td.textContent = cell;
+                            row.appendChild(td);
+                        });
+                        table.appendChild(row);
+                    }
+                    
+                    document.getElementById("stampadati").innerHTML = "";
+                    document.getElementById("stampadati").appendChild(table);
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+@font-face{
+    font-family: 'PrincipaleBold';
+    src: url('Comfortaa-Bold.ttf') format('truetype');
+}
+
+body {
+    font-family: 'PrincipaleBold';
+}
+
+.pagina{
+    position: fixed;
+    background: url('sfondo.png') no-repeat;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.pagina a{
+    color: black;
+    font-size: 30px;
+}

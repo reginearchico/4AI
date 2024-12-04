@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Calcolatrice</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+
+        function calcola(operazione) {
+
+            var num1 = document.getElementById('numero1').valueAsNumber;
+            var num2 = document.getElementById('numero2').valueAsNumber;
+            var risultato = 0;
+
+            if (operazione === 'somma') {
+                risultato = num1 + num2;
+            } else if (operazione === 'sottrai') {
+                risultato = num1 - num2;
+            } else if (operazione === 'moltiplica') {
+                risultato = num1 * num2;
+            } else if (operazione === 'dividi') {
+                if (num2 !== 0) {
+                    risultato = num1 / num2;
+                } else {
+                    document.getElementById('risultato').innerText = "Impossibile dividere per zero!";
+                    return;
+                }
+            }
+            document.getElementById('risultato').innerText = "Risultato: " + risultato;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Calcolatrice</h1>
+    <input type="number" id="numero1">
+    <input type="number" id="numero2">
+    <div id="risultato"></div>
+    <br>
+    <button onclick="calcola('somma')">+</button>
+    <button onclick="calcola('sottrai')">-</button>
+    <button onclick="calcola('moltiplica')">*</button>
+    <button onclick="calcola('dividi')">/</button>
+    
+</body>
+
+</html>
