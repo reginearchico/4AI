@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+        <title>DOM Html</title>
+        <link rel="stylesheet" href="Style.css">
+    </head>
+
+    <script>
+        function stampa(){
+            var cont1 = document.createElement("div");
+            var cont2 = document.createElement("div");
+            var cont3 = document.createElement("div");
+            var text1 = document.createTextNode(document.getElementById('inp1').value);
+            var text2 = document.createTextNode(document.getElementById('inp2').value);
+            var text3 = document.createTextNode(document.getElementById('inp3').value);
+            cont1.appendChild(text1);
+            cont2.appendChild(text2);
+            cont3.appendChild(text3);
+            document.getElementById("testo1").style.backgroundColor = "green";
+            document.getElementById("testo2").style.backgroundColor = "red";
+            document.getElementById("testo3").style.backgroundColor = "blue";
+            document.getElementById("testo1").appendChild(cont1);
+            document.getElementById("testo2").appendChild(cont2);
+            document.getElementById("testo3").appendChild(cont3);
+        }
+    </script>
+
+    <body class="body">
+        <div class="generale">
+            <div class="form">
+                <h1>DOM</h1><br>
+                <div>
+                    <label>Testo 1</label>
+                    <input type="text" width="40" id="inp1">
+                </div>
+                <div>
+                    <label>Testo 2</label>
+                    <input type="text" width="40" id="inp2">
+                </div>
+                <div>
+                    <label>Testo 3</label>
+                    <input type="text" width="40" id="inp3">
+                </div>
+                <br>
+                <div>
+                    <div>
+                        <input type="button" value="stampa" id="bottone" onclick="stampa()">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div id="testo1"></div>
+            <div id="testo2"></div>
+            <div id="testo3"></div>
+        </div>
+    </body>
+
+</html>
