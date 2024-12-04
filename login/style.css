@@ -1,0 +1,78 @@
+@font-face{
+    font-family: "Principale";
+    src: url("GothamMedium.ttf");
+}
+
+h1{padding-top: 40px; font-size: 50px;}
+
+h1, h5, label{
+    text-shadow: 2px 2px 4px black;
+}
+
+body{
+    background-color: white;
+    font-family: "Principale";
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1080px;
+}
+
+.generale{
+    width: 450px;
+    box-shadow: 200px;
+    margin-top: -10%;
+}
+
+#esito{
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    display: none;
+    color: #9999ff;
+    margin-bottom: 30px;
+}
+
+.form{
+    background-color: #9999ff;
+    text-align: center;
+    border: 2px;
+    color: white;
+    width: 450px;
+    height: 450px;
+    border-radius: 30px;
+}
+
+input[type="text"], input[type="password"]{
+    border: 2px solid white;
+    width: 40%;
+    height: 20%;
+    min-width: 120px;
+    min-height: 30px;
+    max-height: 30px;
+    max-width: 150px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin-top: 3%;
+}
+
+input[type="button"]{
+    background-color: rgb(177, 175, 175);
+    border: none;
+    width: 20%;
+    height: 30%;
+    min-width: 50px;
+    min-height: 30px;
+    max-height: 40px;
+    max-width: 150px;
+    border-radius: 20px; 
+    color: black;
+    text-align: center;
+}
