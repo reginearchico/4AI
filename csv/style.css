@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Principale";
+    src: url("Comfortaa-Bold.ttf");
+}
+
+body {
+    font-family: "Principale";
+    background-color: rgb(78, 160, 255);
+    text-align: center;
+}
+
+.tabella {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+table {
+    width: 80%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(16, 79, 151);
+    color: white;
+}
+
+td {
+    background-color: white;
+}
