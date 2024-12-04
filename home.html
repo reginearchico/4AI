@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Anagrafica</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function seleziona() {
+            var options = document.getElementById("provincia");
+            var selectedOption = options.value;
+            return selectedOption;
+        }
+
+        function leggiRadio(value) {
+            if (value === 'Maschio') {
+                document.getElementById("maschio").checked = true;
+            } else if (value === 'Femmina') {
+                document.getElementById("femmina").checked = true;
+            } else if (value === 'Altro') {
+                document.getElementById("altro").checked = true;
+            }
+        }
+
+        function stampa() {
+            var n = document.getElementById("nome").value;
+            var c = document.getElementById("cognome").value;
+            var i = document.getElementById("indirizzo").value;
+            var l = document.getElementById("luogo").value;
+            var k = document.getElementById("cap").value;
+            var t = document.getElementById("italiano");
+            var s = document.getElementById("storia");
+            var m = document.getElementById("matematica");
+            var e = document.getElementById("sistemi");
+            var p = document.getElementById("TPS");
+            var f = document.getElementById("informatica");
+            var o = document.getElementById("telecomunicazioni");
+            var male = document.getElementById("maschio");
+            var female = document.getElementById("femmina");
+            var other = document.getElementById("altro");
+
+            var materie = "";
+            if (t.checked) { materie += "- Italiano <br>"; }
+            if (s.checked) { materie += "- Storia <br>"; }
+            if (m.checked) { materie += "- Matematica <br>"; }
+            if (e.checked) { materie += "- Sistemi <br>"; }
+            if (p.checked) { materie += "- TPS <br>"; }
+            if (f.checked) { materie += "- Informatica <br>"; }
+            if (o.checked) { materie += "- Telecomunicazioni <br>"; }
+
+            var selectedOptions = seleziona();
+
+            var genere = "";
+            if (male.checked) {
+                genere = "Maschio";
+            } else if (female.checked) {
+                genere = "Femmina";
+            } else {
+                genere = "Altro";
+            }
+
+            var outData = "Nome: " + n + "<br>" + "Cognome: " + c + "<br>" + "Indirizzo: " + i + "<br>" +
+                "Luogo di residenza: " + l + "<br>" + "CAP: " + k + "<br>" + "Luogo di nascita: " + selectedOptions + "<br>" +
+                "Materie con una valutazione: " + materie + "<br>" + "Genere: " + genere;
+            document.getElementById("out").innerHTML = outData;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>ANAGRAFICA</h1>
+    <h3>Nome:</h3>
+    <input type="text" id="nome">
+    <h3>Cognome:</h3>
+    <input type="text" id="cognome">
+    <h3>indirizzo:</h3>
+    <input type="text" id="indirizzo">
+    <h3>Luogo di residenza:</h3>
+    <input type="text" id="luogo">
+    <h3>CAP:</h3>
+    <input type="text" id="cap">
+    <h3>Luogo di nascita:</h3>
+    <select id="provincia">
+        <option value="RM">Roma</option>
+        <option value="NA">Napoli</option>
+        <option value="TO">Torino</option>
+        <option value="MI">Milano</option>
+        <option value="PV">Pavia</option>
+        <option value="VA">Varese</option>
+        <option value="CR">Cremona</option>
+        <option value="IS">Isernia</option>
+    </select>
+    <div id="scelta"></div>
+    <br><br>
+    <h3>Seleziona le materie con una valutazione:</h3>
+    <input type="checkbox" id="italiano">
+    <label for="italiano">Italiano</label><br><br>
+    <input type="checkbox" id="storia">
+    <label for="storia">Storia</label><br><br>
+    <input type="checkbox" id="matematica">
+    <label for="matematica">Matematica</label><br><br>
+    <input type="checkbox" id="sistemi">
+    <label for="sistemi">Sistemi</label><br><br>
+    <input type="checkbox" id="TPS">
+    <label for="TPS">TPS</label><br><br>
+    <input type="checkbox" id="informatica">
+    <label for="informatica">Informatica</label><br><br>
+    <input type="checkbox" id="telecomunicazioni">
+    <label for="telecomunicazioni">Telecomunicazioni</label>
+    <br><br>
+    <h3>Genere:</h3>
+    <input type="radio" id="maschio" name="genere" value="Maschio">
+    <label for="maschio" onclick="leggiRadio('Maschio')">Maschio</label><br><br>
+    <input type="radio" id="femmina" name="genere" value="Femmina">
+    <label for="femmina" onclick="leggiRadio('Femmina')">Femmina</label><br><br>
+    <input type="radio" id="altro" name="genere" value="Altro">
+    <label for="altro" onclick="leggiRadio('Altro')">Altro</label>
+    <br><br>
+    <input type="button" onclick="stampa()" value="Invio">
+    <p id="out"></p>
+
+</body>
+
+</html>
